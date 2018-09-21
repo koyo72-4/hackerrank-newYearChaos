@@ -3,9 +3,8 @@ function minimumBribes(q) {
         let originalIndex = person - 1;
         return originalIndex - index;
     });
-    let sortedDifferences = differences.slice(0).sort((a, b) => a - b);
 
-    if (sortedDifferences[sortedDifferences.length - 1] > 2) {
+    if (differences.filter(diff => diff > 2).length > 0) {
         return console.log('Too chaotic');
     } else {
         for (let i = 0; i < differences.length; i++) {
